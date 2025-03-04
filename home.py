@@ -28,3 +28,5 @@ with col2:
 with col3:
     st.header("Myostis")
     st.image("./img/fo3.jpg")
+
+    
