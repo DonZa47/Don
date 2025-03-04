@@ -1,5 +1,8 @@
+from sklearn.neighbors import KNeighborsClassifier
 import streamlit as st
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
 st.title("🐷🐷🐷Website Developing using Python🐷🐷")
 st.header("🍖🍖Website Developing using Python🍖🍖")
@@ -64,7 +67,7 @@ if st.button("ทำนายผล"):
    dt = pd.read_csv("./data/iris-3.csv") 
    X = dt.drop('variety', axis=1)
    y = dt.variety   
-   
+
    Knn_model = KNeighborsClassifier(n_neighbors=3)
    Knn_model.fit(X, y)  
    x_input = np.array([[pt_len, pt_wd, sp_len, sp_wd]])
